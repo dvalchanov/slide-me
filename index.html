@@ -46,7 +46,10 @@
   <script>
     var slideMe = new SlideMe("slider");
 
-    slideMe.within(1, "s").to.page(3);
+    slideMe
+      .within(1, "s")
+      .to.last()
+      .end();
   </script>
 </body>
 </html>
