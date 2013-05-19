@@ -3,12 +3,51 @@
 <head>
   <meta charset="utf-8">
   <title>Notes</title>
-  <meta name="description" content="Notes">
-  <meta name="author" content="DimitarValchanov">
+  <meta name="description" content="SlideMe">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding: 100px;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+    }
+
+    ul {
+      width: 400px;
+      height: 100px;
+    }
+
+    li {
+      list-style-type: none;
+      float: left;
+      width: 100px;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
+  <div id="wrapper">
+    <ul id="slider">
+      <li>Page1</li>
+      <li>Page2</li>
+      <li>Page3</li>
+      <li>Page4</li>
+    </ul>
+  </div>
+
  <script type="text/javascript" src="lib/slide.js"></script>
   <script>
+    var slideMe = new SlideMe("slider");
+
+    slideMe.within(1, "s").to.page(3);
+    console.log(slideMe);
   </script>
 </body>
 </html>
